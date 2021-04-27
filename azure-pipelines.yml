@@ -20,8 +20,8 @@ steps:
     resourceGroupName: 'Sneakers'
     location: 'UK West'
     templateLocation: 'Linked artifact'
-    csmFile: 'resources/template.json'
-    csmParametersFile: 'resources/parameters.json'
+    csmFile: '*.json'
+    csmParametersFile: '*.json'
     deploymentMode: 'Incremental'
 # Start with a minimal pipeline that you can customize to build and deploy your code.
 # Add steps that build, run tests, deploy, and more:
