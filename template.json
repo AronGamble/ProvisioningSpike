@@ -25,7 +25,7 @@
             "tags": {
                 "displayName": "[parameters('storageName')]"
             },
-            "location": "[resourceGroup().location]",
+            "location": "ukwest",
             "kind": "StorageV2",
             "sku": {
                 "name": "[parameters('storageSKU')]",
