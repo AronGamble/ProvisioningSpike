@@ -12,6 +12,7 @@ steps:
 - task: AzureResourceManagerTemplateDeployment@3
   inputs:
     deploymentScope: 'Subscription'
+    resourceGroupName: 'SneakersDeployResourceGroup'
     azureResourceManagerConnection: 'Microsoft Partner Network (30e2203a-1e9e-46db-bda9-542383d60975)'
     subscriptionId: '30e2203a-1e9e-46db-bda9-542383d60975'
     location: 'UK West'
