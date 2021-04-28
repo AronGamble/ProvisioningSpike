@@ -17,7 +17,7 @@ steps:
     azureResourceManagerConnection: 'Microsoft Partner Network (30e2203a-1e9e-46db-bda9-542383d60975)'
     subscriptionId: '30e2203a-1e9e-46db-bda9-542383d60975'
     action: 'Create Or Update Resource Group'
-    resourceGroupName: 'Sneakers'
+    resourceGroupName: 'SneakersNew'
     location: 'UK West'
     templateLocation: 'Linked artifact'
     csmFile: 'template.json'
