@@ -5,7 +5,7 @@
     {
       "type": "Microsoft.Resources/resourceGroups",
       "apiVersion": "2020-06-01",
-      "name": "SNeakersNew01",
+      "name": "SNeakersNew2021",
       "location": "UK West",
       "tags": {
         "Note": "subscription level deployment"
