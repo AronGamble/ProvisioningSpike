@@ -23,6 +23,9 @@ steps:
 # Add steps that build, run tests, deploy, and more:
 # https://aka.ms/yaml
 
+- script: echo Hello, world!
+  displayName: 'Latest version should have run'
+
 - script: |
     echo Add other tasks to build, test, and deploy your project.
     echo See https://aka.ms/yaml
