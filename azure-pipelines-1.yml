@@ -17,7 +17,6 @@ steps:
     location: 'UK West'
     templateLocation: 'Linked artifact'
     csmFile: 'template.json'
-    csmParametersFile: 'parameters.json'
     deploymentMode: 'Incremental'
 # Start with a minimal pipeline that you can customize to build and deploy your code.
 # Add steps that build, run tests, deploy, and more:
