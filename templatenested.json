@@ -145,7 +145,7 @@
     "outputs": {
         "serverFarmIdOutput": {
             "type": "string",
-            "value": "[resourceId(subscription().id, resourceGroup().name,'Microsoft.Web/serverfarms', variables('hostingPlanName'))]"
+            "value": "[resourceId('Microsoft.Web/serverfarms', variables('hostingPlanName'))]"
         },
         "objectOutput": {
             "type": "object",
