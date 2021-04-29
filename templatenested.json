@@ -80,7 +80,7 @@
                             "location": "ukwest",
                             "kind": "functionapp",
                             "dependsOn": [
-                                "/subscriptions/30e2203a-1e9e-46db-bda9-542383d60975/resourceGroups/villa/providers/Microsoft.Web/serverFarms/backendforfrontend",
+                                "/subscriptions/30e2203a-1e9e-46db-bda9-542383d60975/resourceGroups/villa/providers/Microsoft.Storage/storageAccounts/2mp7qoistohgaazfunctions",
                                 "[resourceId('Microsoft.Storage/storageAccounts', variables('funcAppstorageAccountName'))]"
                             ],
                             "properties": {
