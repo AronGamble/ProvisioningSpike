@@ -10,7 +10,7 @@
         "functionAppName": "backendforfrontend",
         "hostingPlanName": "backendforfrontend",
         "applicationInsightsName": "backendforfrontend",
-        "funcAppstorageAccountName": "funcappstorage",
+        "funcAppstorageAccountName": "funcappstoragesneakers",
         "functionWorkerRuntime": "node"
     },
     "resources": [
