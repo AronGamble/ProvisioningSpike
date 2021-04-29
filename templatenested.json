@@ -80,8 +80,8 @@
                             "location": "ukwest",                            
                             "kind": "functionapp",
                             "dependsOn": [
-                                "[resourceId(subscription().id, resourceGroup().Id,'Microsoft.Web/serverfarms', variables('hostingPlanName'))]",
-                                "[resourceId(subscription().id, resourceGroup().Id,'Microsoft.Storage/storageAccounts', variables('funcAppstorageAccountName'))]"
+                                "[resourceId(subscription().id, resourceGroup().name,'Microsoft.Web/serverfarms', variables('hostingPlanName'))]",
+                                "[resourceId(subscription().id, resourceGroup().name,'Microsoft.Storage/storageAccounts', variables('funcAppstorageAccountName'))]"
                             ],
                             "properties": {
                                 "serverFarmId": "[resourceId('Microsoft.Web/serverfarms', variables('hostingPlanName'))]",
