@@ -80,11 +80,11 @@
                             "location": "ukwest",                            
                             "kind": "functionapp",
                             "dependsOn": [
-                                "[resourceId('Microsoft.Web/serverfarms', variables('hostingPlanName'))]",
-                                "[resourceId('Microsoft.Storage/storageAccounts', variables('funcAppstorageAccountName'))]"
+                                "[resourceId(null(), resourceGroup().Id,'Microsoft.Web/serverfarms', variables('hostingPlanName'))]",
+                                "[resourceId(null(), resourceGroup().Id,'Microsoft.Storage/storageAccounts', variables('funcAppstorageAccountName'))]"
                             ],
                             "properties": {
-                                "serverFarmId": "[resourceId(null(), resourceGroup().Id,'Microsoft.Web/serverfarms', variables('hostingPlanName'))]",
+                                "serverFarmId": "[resourceId('Microsoft.Web/serverfarms', variables('hostingPlanName'))]",
                                 "siteConfig": {
                                     "appSettings": [
                                         {
