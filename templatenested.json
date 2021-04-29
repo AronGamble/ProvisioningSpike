@@ -11,7 +11,8 @@
         "hostingPlanName": "backendforfrontend",
         "applicationInsightsName": "backendforfrontend",
         "funcAppstorageAccountName": "funcappstoragesneakers",
-        "functionWorkerRuntime": "node"
+        "functionWorkerRuntime": "node",
+        "tt": "ddddd"
     },
     "resources": [
         {
@@ -80,7 +81,7 @@
                             "location": "ukwest",
                             "kind": "functionapp",
                             "dependsOn": [
-                                "[resourceId(subscription().id, resourceGroup().name,'Microsoft.Web/serverfarms', variables('hostingPlanName'))]",
+                                "[resourceId(subscription().id, resourceGroup().name,'Microsoft.Web/serverfarms', variables('tt'))]",
                                 "[resourceId(subscription().id, resourceGroup().name,'Microsoft.Storage/storageAccounts', variables('funcAppstorageAccountName'))]"
                             ],
                             "properties": {
