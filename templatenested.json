@@ -10,7 +10,7 @@
         "functionAppName": "backendforfrontend",
         "hostingPlanName": "backendforfrontend",
         "applicationInsightsName": "backendforfrontend",
-        "funcAppStorageAccountName": "whywontyouwork",
+        "funcAppStorageAccountName": "[concat(uniquestring('112'), 'azfunctions')]",
         "functionWorkerRuntime": "node"
     },
     "resources": [
