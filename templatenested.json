@@ -79,8 +79,8 @@
                             "name": "[variables('functionAppName')]",
                             "location": "ukwest",
                             "kind": "functionapp",
-                            "dependsOn": [
-                                "[resourceId('Microsoft.Web/serverfarms', variables('hostingPlanName'))]",
+                            "dependsOn": [                                
+                                "/subscriptions/30e2203a-1e9e-46db-bda9-542383d60975/resourceGroups/villa/providers/Microsoft.Web/serverFarms/backendforfrontend",
                                 "[resourceId('Microsoft.Storage/storageAccounts', variables('funcAppstorageAccountName'))]"
                             ],
                             "properties": {
