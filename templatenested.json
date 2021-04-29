@@ -73,13 +73,13 @@
                             }
 
                         },
-                        /* {
+                        {
                             "type": "Microsoft.Web/sites",
                             "apiVersion": "2020-06-01",
                             "name": "[variables('functionAppName')]",
                             "location": "ukwest",
                             "kind": "functionapp",
-                            "dependsOn": [                                
+                            "dependsOn": [
                                 "/subscriptions/30e2203a-1e9e-46db-bda9-542383d60975/resourceGroups/villa/providers/Microsoft.Web/serverFarms/backendforfrontend",
                                 "[resourceId('Microsoft.Storage/storageAccounts', variables('funcAppstorageAccountName'))]"
                             ],
@@ -118,7 +118,7 @@
                                     ]
                                 }
                             }
-                        }, */
+                        },
                         {
                             "type": "microsoft.insights/components",
                             "apiVersion": "2020-02-02-preview",
