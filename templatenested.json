@@ -79,8 +79,8 @@
                             "location": "ukwest",
                             "kind": "functionapp",
                             "dependsOn": [
-                                "[resourceId('villa','Microsoft.Web/serverfarms', variables('hostingPlanName'))]",
-                                "[resourceId('villa','Microsoft.Storage/storageAccounts', variables('storageAccountName'))]"
+                                "[resourceId('Microsoft.Web/serverfarms', variables('hostingPlanName'))]",
+                                "[resourceId('Microsoft.Storage/storageAccounts', variables('funcAppstorageAccountName'))]"
                             ],
                             "properties": {
                                 "serverFarmId": "[resourceId('Microsoft.Web/serverfarms', variables('hostingPlanName'))]",
