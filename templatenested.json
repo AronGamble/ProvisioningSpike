@@ -118,8 +118,8 @@
                                     ]
                                 }
                             }
-                        }
-                        /*{
+                        },
+                        {
                             "type": "microsoft.insights/components",
                             "apiVersion": "2020-02-02-preview",
                             "name": "[variables('applicationInsightsName')]",
@@ -134,7 +134,7 @@
                                 "Application_Type": "web"
                             }
 
-                        } */
+                        }
                     ],
                     "outputs": {
                         "serverFarmIdOutputInner": {
