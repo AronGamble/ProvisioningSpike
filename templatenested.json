@@ -76,10 +76,11 @@
                         {
                             "type": "Microsoft.Web/sites",
                             "apiVersion": "2018-02-01",
-                            "name": "[variables('functionAppName')]",
+                            "name": "[variables('functionAppName')]",                            
                             "location": "ukwest",
                             "kind": "functionapp",
                             "dependsOn": [
+                                "[resourceId('Microsoft.Resources/resourceGroups/', variables('rgName'))]",
                                 "[resourceId('Microsoft.Web/serverfarms', variables('hostingPlanName'))]",
                                 "[resourceId('Microsoft.Storage/storageAccounts', variables('funcAppstorageAccountName'))]"
                             ],
