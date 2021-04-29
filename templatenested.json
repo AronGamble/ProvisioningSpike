@@ -78,10 +78,6 @@
                             "name": "[variables('functionAppName')]",
                             "location": "ukwest",
                             "kind": "functionapp",
-                            "dependsOn": [
-                                "[resourceId('Microsoft.Web/serverfarms', variables('hostingPlanName'))]",
-                                "[resourceId('Microsoft.Storage/storageAccounts', variables('funcAppstorageAccountName'))]"
-                            ],
                             "properties": {
                                 "serverFarmId": "[resourceId('Microsoft.Web/serverfarms', variables('hostingPlanName'))]",
                                 "siteConfig": {
