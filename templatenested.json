@@ -152,13 +152,6 @@
 
     ],
     "outputs": {
-        "serverFarmIdOutput": {
-            "type": "string",
-            "value": "[resourceId('Microsoft.Web/serverfarms', variables('hostingPlanName'))]"
-        },
-        "objectOutput": {
-            "type": "object",
-            "value": "[subscription()]"
-        }
+       
     }
 }
