@@ -77,15 +77,14 @@
                             "type": "Microsoft.Web/sites",
                             "apiVersion": "2018-02-01",
                             "name": "[variables('functionAppName')]",                            
-                            "location": "ukwest",
+                            "location": "ukwest",                            
                             "kind": "functionapp",
                             "dependsOn": [
-                                "[resourceId('Microsoft.Resources/resourceGroups/', variables('rgName'))]",
                                 "[resourceId('Microsoft.Web/serverfarms', variables('hostingPlanName'))]",
                                 "[resourceId('Microsoft.Storage/storageAccounts', variables('funcAppstorageAccountName'))]"
                             ],
                             "properties": {
-                                "serverFarmId": "[resourceId('Microsoft.Web/serverfarms', variables('hostingPlanName'))]",
+                                "serverFarmId": "[resourceId(null(), resourceGroup().Id,'Microsoft.Web/serverfarms', variables('hostingPlanName'))]",
                                 "siteConfig": {
                                     "appSettings": [
                                         {
