@@ -72,17 +72,17 @@
                                 "computeMode": "Dynamic"
                             }
 
-                        }
-                        /*       {
+                        },
+                        {
                             "type": "Microsoft.Web/sites",
                             "apiVersion": "2018-02-01",
                             "name": "[variables('functionAppName')]",
                             "location": "ukwest",
                             "kind": "functionapp",
-                             "dependsOn": [
-                                "[resourceId(subscription().id, resourceGroup().name,'Microsoft.Web/serverfarms', variables('hostingPlanName'))]",
-                                "[resourceId(subscription().id, resourceGroup().name,'Microsoft.Storage/storageAccounts', variables('funcAppstorageAccountName'))]"
-                            ], 
+                            "dependsOn": [
+                                "[resourceId('Microsoft.Web/serverfarms', variables('hostingPlanName'))]",
+                                "[resourceId('Microsoft.Storage/storageAccounts', variables('funcAppstorageAccountName'))]"
+                            ],
                             "properties": {
                                 "serverFarmId": "[resourceId('Microsoft.Web/serverfarms', variables('hostingPlanName'))]",
                                 "siteConfig": {
@@ -118,7 +118,7 @@
                                     ]
                                 }
                             }
-                        } */
+                        }
                         /*{
                             "type": "microsoft.insights/components",
                             "apiVersion": "2020-02-02-preview",
@@ -152,6 +152,6 @@
 
     ],
     "outputs": {
-       
+
     }
 }
