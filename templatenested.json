@@ -81,7 +81,7 @@
                             "kind": "functionapp",
                             "dependsOn": [
                                 "[resourceId('Microsoft.Web/serverfarms', variables('hostingPlanName'))]",
-                                "[resourceId('Microsoft.Storage/storageAccounts', variables('storageAccountName'))]"
+                                "[resourceId('Microsoft.Storage/storageAccounts', variables('funcAppstorageAccountName'))]"
                             ],
                             "properties": {
                                 "serverFarmId": "[resourceId('Microsoft.Web/serverfarms', variables('hostingPlanName'))]",
@@ -89,11 +89,11 @@
                                     "appSettings": [
                                         {
                                             "name": "AzureWebJobsStorage",
-                                            "value": "[concat('DefaultEndpointsProtocol=https;AccountName=', variables('storageAccountName'), ';EndpointSuffix=', environment().suffixes.storage, ';AccountKey=',listKeys(resourceId('Microsoft.Storage/storageAccounts', variables('storageAccountName')), '2019-06-01').keys[0].value)]"
+                                            "value": "[concat('DefaultEndpointsProtocol=https;AccountName=', variables('funcAppstorageAccountName'), ';EndpointSuffix=', environment().suffixes.storage, ';AccountKey=',listKeys(resourceId('Microsoft.Storage/storageAccounts', variables('funcAppstorageAccountName')), '2019-06-01').keys[0].value)]"
                                         },
                                         {
                                             "name": "WEBSITE_CONTENTAZUREFILECONNECTIONSTRING",
-                                            "value": "[concat('DefaultEndpointsProtocol=https;AccountName=', variables('storageAccountName'), ';EndpointSuffix=', environment().suffixes.storage, ';AccountKey=',listKeys(resourceId('Microsoft.Storage/storageAccounts', variables('storageAccountName')), '2019-06-01').keys[0].value)]"
+                                            "value": "[concat('DefaultEndpointsProtocol=https;AccountName=', variables('funcAppstorageAccountName'), ';EndpointSuffix=', environment().suffixes.storage, ';AccountKey=',listKeys(resourceId('Microsoft.Storage/storageAccounts', variables('funcAppstorageAccountName')), '2019-06-01').keys[0].value)]"
                                         },
                                         {
                                             "name": "WEBSITE_CONTENTSHARE",
