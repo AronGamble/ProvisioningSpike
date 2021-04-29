@@ -79,8 +79,8 @@
                             "location": "ukwest",
                             "kind": "functionapp",
                             "dependsOn": [
-                                "[resourceId(null(),'villa','Microsoft.Web/serverfarms', variables('hostingPlanName'))]",
-                                "[resourceId('Microsoft.Storage/storageAccounts', variables('storageAccountName'))]"
+                                "[resourceId('villa','Microsoft.Web/serverfarms', variables('hostingPlanName'))]",
+                                "[resourceId('villa','Microsoft.Storage/storageAccounts', variables('storageAccountName'))]"
                             ],
                             "properties": {
                                 "serverFarmId": "[resourceId('Microsoft.Web/serverfarms', variables('hostingPlanName'))]",
@@ -117,7 +117,7 @@
                                     ]
                                 }
                             }
-                        },                        
+                        },
                         {
                             "type": "microsoft.insights/components",
                             "apiVersion": "2020-02-02-preview",
