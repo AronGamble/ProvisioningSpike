@@ -136,7 +136,16 @@
 
                         } */
                     ],
-                    "outputs": {}
+                    "outputs": {
+                        "serverFarmIdOutputInner": {
+                            "type": "string",
+                            "value": "[resourceId('Microsoft.Web/serverfarms', variables('hostingPlanName'))]"
+                        },
+                        "objectOutputInner": {
+                            "type": "object",
+                            "value": "[subscription()]"
+                        }
+                    }
                 }
             }
         }
