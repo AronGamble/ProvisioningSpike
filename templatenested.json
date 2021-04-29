@@ -14,7 +14,6 @@
         "functionWorkerRuntime": "node"
     },
     "resources": [
-
         {
             "type": "Microsoft.Resources/resourceGroups",
             "apiVersion": "2018-05-01",
@@ -42,7 +41,6 @@
                             "type": "Microsoft.Storage/storageAccounts",
                             "apiVersion": "2017-10-01",
                             "name": "[variables('storageAccountName')]",
-                            "resourceGroup": "[variables('rgName')]",
                             "location": "[variables('rgLocation')]",
                             "kind": "StorageV2",
                             "sku": {
@@ -53,18 +51,17 @@
                             "type": "Microsoft.Storage/storageAccounts",
                             "apiVersion": "2019-06-01",
                             "name": "[variables('funcAppstorageAccountName')]",
-                            "resourceGroup": "[variables('rgName')]",
                             "location": "ukwest",
                             "sku": {
                                 "name": "Standard_LRS"
                             },
                             "kind": "Storage"
-                        },
+                        }
+                       /*  },
                         {
                             "type": "Microsoft.Web/serverfarms",
                             "apiVersion": "2018-02-01",
                             "name": "[variables('hostingPlanName')]",
-                            "resourceGroup": "[variables('rgName')]",
                             "location": "ukwest",
                             "sku": {
                                 "name": "Y1",
@@ -79,7 +76,6 @@
                             "type": "Microsoft.Web/sites",
                             "apiVersion": "2018-02-01",
                             "name": "[variables('functionAppName')]",
-                            "resourceGroup": "[variables('rgName')]",
                             "location": "ukwest",
                             "kind": "functionapp",
                             "dependsOn": [
@@ -126,7 +122,6 @@
                             "type": "microsoft.insights/components",
                             "apiVersion": "2020-02-02-preview",
                             "name": "[variables('applicationInsightsName')]",
-                            "resourceGroup": "[variables('rgName')]",
                             "location": "ukwest",
                             "kind": "web",
                             "tags": {
@@ -138,7 +133,7 @@
                                 "Application_Type": "web"
                             }
 
-                        }
+                        } */
                     ],
                     "outputs": {}
                 }
