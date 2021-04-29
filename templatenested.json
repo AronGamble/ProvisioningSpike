@@ -56,7 +56,7 @@
                                 "name": "Standard_LRS"
                             },
                             "kind": "Storage"
-                        
+
                         },
                         {
                             "type": "Microsoft.Web/serverfarms",
@@ -71,13 +71,13 @@
                                 "name": "[variables('hostingPlanName')]",
                                 "computeMode": "Dynamic"
                             }
-                        
+
                         },
                         {
                             "type": "Microsoft.Web/sites",
                             "apiVersion": "2018-02-01",
-                            "name": "[variables('functionAppName')]",                            
-                            "location": "ukwest",                            
+                            "name": "[variables('functionAppName')]",
+                            "location": "ukwest",
                             "kind": "functionapp",
                             "dependsOn": [
                                 "[resourceId(subscription().id, resourceGroup().name,'Microsoft.Web/serverfarms', variables('hostingPlanName'))]",
@@ -142,5 +142,10 @@
         }
 
     ],
-    "outputs": {}
+    "outputs": {
+        "serverFarm": {
+            "type": "string",
+            "value": "[resourceId(subscription().id, resourceGroup().name,'Microsoft.Web/serverfarms', variables('hostingPlanName'))]"
+        }
+    }
 }
