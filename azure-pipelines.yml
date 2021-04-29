@@ -22,9 +22,10 @@ steps:
     location: 'UK West'
     templateLocation: 'Linked artifact'
     csmFile: 'templatenested.json'
-    deploymentMode: 'Incremental'
-    
+    deploymentMode: 'Incremental' 
+    deploymentOutputs: 'runOutputs'
 - script: |
     echo Add other tasks to build, test, and deploy your project.
     echo See https://aka.ms/yaml
   displayName: 'Run a multi-line script'
+  
