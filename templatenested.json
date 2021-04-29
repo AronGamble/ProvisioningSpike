@@ -32,14 +32,14 @@
             "properties": {
                 "mode": "Incremental",
                 "template": {
-                    "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#",
+                    "$schema": "https://schema.management.azure.com/schemas/2019-08-01/deploymentTemplate.json#",
                     "contentVersion": "1.0.0.0",
                     "parameters": {},
                     "variables": {},
                     "resources": [
                         {
                             "type": "Microsoft.Storage/storageAccounts",
-                            "apiVersion": "2017-10-01",
+                            "apiVersion": "2019-06-01",
                             "name": "[variables('storageAccountName')]",
                             "location": "[variables('rgLocation')]",
                             "kind": "StorageV2",
@@ -60,7 +60,7 @@
                         },
                         {
                             "type": "Microsoft.Web/serverfarms",
-                            "apiVersion": "2018-02-01",
+                            "apiVersion": "2020-06-01",
                             "name": "[variables('hostingPlanName')]",
                             "location": "ukwest",
                             "sku": {
@@ -75,7 +75,7 @@
                         },
                         {
                             "type": "Microsoft.Web/sites",
-                            "apiVersion": "2018-02-01",
+                            "apiVersion": "2020-06-01",
                             "name": "[variables('functionAppName')]",
                             "location": "ukwest",
                             "kind": "functionapp",
