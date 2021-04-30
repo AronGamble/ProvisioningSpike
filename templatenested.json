@@ -173,7 +173,7 @@
                         {
                             "type": "Microsoft.DocumentDB/databaseAccounts/sqlDatabases",
                             "apiVersion": "2021-01-15",
-                            "name": "[concat('solutionlab' ,'/', 'sollabdb')]",
+                            "name": "[concat('solutionlabcosmos' ,'/', 'sollabdb')]",
                             "dependsOn": [
                                 "[resourceId('Microsoft.DocumentDB/databaseAccounts', 'solutionlabcosmos')]"
                             ],
