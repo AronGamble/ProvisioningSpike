@@ -76,7 +76,7 @@
                                 "computeMode": "Dynamic"
                             }
                         },
-                        /*  {
+                         {
                             "type": "Microsoft.Web/sites",
                             "apiVersion": "2020-06-01",
                             "name": "[variables('functionAppName')]",
@@ -121,7 +121,7 @@
                                     ]
                                 }
                             }
-                        }, */
+                        },
                         {
                             "type": "microsoft.insights/components",
                             "apiVersion": "2020-02-02-preview",
