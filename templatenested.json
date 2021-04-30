@@ -35,10 +35,10 @@
                     "variables": {
                         "storageAccountName": "avfc",
                         "rgLocation": "ukwest",
-                        "functionAppName": "backendforfrontend",
-                        "hostingPlanName": "backendforfrontend",
-                        "applicationInsightsName": "backendforfrontend",
-                        "funcAppStorageAccountName": "[concat(uniquestring('112'), 'azfunctions')]",
+                        "functionAppName": "apollographqlserver",
+                        "hostingPlanName": "apollographqlserver",
+                        "applicationInsightsName": "apollographqlserver",
+                        "funcAppStorageAccountName": "[concat(uniquestring('112'), 'apolloserverstorage')]",
                         "functionWorkerRuntime": "node"
                     },
                     "resources": [
