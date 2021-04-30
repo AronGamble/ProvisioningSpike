@@ -33,7 +33,7 @@
                     "contentVersion": "1.0.0.0",
                     "parameters": {},
                     "variables": {
-                        "storageAccountName": "avfc",
+                        "storageAccountName": "staticwebsite",
                         "rgLocation": "ukwest",
                         "functionAppName": "apollographqlserver",
                         "hostingPlanName": "apollographqlserver",
