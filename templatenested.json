@@ -27,6 +27,7 @@
                     "scope": "inner"
                 },
                 "mode": "Incremental",
+
                 "template": {
                     "$schema": "https://schema.management.azure.com/schemas/2019-08-01/deploymentTemplate.json#",
                     "contentVersion": "1.0.0.0",
@@ -76,7 +77,7 @@
                                 "computeMode": "Dynamic"
                             }
                         },
-                        /*  {
+                        {
                             "type": "Microsoft.Web/sites",
                             "apiVersion": "2020-06-01",
                             "name": "[variables('functionAppName')]",
@@ -121,7 +122,7 @@
                                     ]
                                 }
                             }
-                        }, */
+                        },
                         {
                             "type": "microsoft.insights/components",
                             "apiVersion": "2020-02-02-preview",
