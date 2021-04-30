@@ -181,7 +181,7 @@
                                 "resource": {
                                     "id": "sollabdb"
                                 },
-                                "options": { "throughput": 200 }
+                                "options": { "throughput": 400 }
                             }
                         }
                     ],
