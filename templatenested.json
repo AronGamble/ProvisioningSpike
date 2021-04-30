@@ -39,7 +39,8 @@
                         "hostingPlanName": "apollographqlserver",
                         "applicationInsightsName": "apollographqlserver",
                         "funcAppStorageAccountName": "[concat(uniquestring('112'), 'apollo')]",
-                        "functionWorkerRuntime": "node"
+                        "functionWorkerRuntime": "node",
+                        "apiManagementServiceName": "solutionlabapim"
                     },
                     "resources": [
                         {
@@ -61,7 +62,6 @@
                                 "name": "Standard_LRS"
                             },
                             "kind": "Storage"
-
                         },
                         {
                             "type": "Microsoft.Web/serverfarms",
@@ -138,6 +138,20 @@
                                 "Application_Type": "web"
                             }
 
+                        },
+                        {
+                            "type": "Microsoft.ApiManagement/service",
+                            "apiVersion": "2019-12-01",
+                            "name": "[variables('apiManagementServiceName')]",
+                            "location": "ukwest",
+                            "sku": {
+                                "name": "developer",
+                                "capacity": "1"
+                            },
+                            "properties": {
+                                "publisherEmail": "aron.gamble@nationalgrid.com",
+                                "publisherName": "Aron Gamble"
+                            }
                         }
                     ],
                     "outputs": {
