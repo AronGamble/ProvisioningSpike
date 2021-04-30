@@ -5,13 +5,6 @@
     "functions": [],
     "variables": {
         "rgName": "villa",
-        "storageAccountName": "avfc",
-        "rgLocation": "ukwest",
-        "functionAppName": "backendforfrontend",
-        "hostingPlanName": "backendforfrontend",
-        "applicationInsightsName": "backendforfrontend",
-        "funcAppStorageAccountName": "[concat(uniquestring('112'), 'azfunctions')]",
-        "functionWorkerRuntime": "node"
     },
     "resources": [
         {
@@ -30,51 +23,61 @@
                 "[resourceId('Microsoft.Resources/resourceGroups/', variables('rgName'))]"
             ],
             "properties": {
-                "mode": "Incremental",
                 "expressionEvaluationOptions": {
-                    "scope": "inner",
-                    "template": {
-                        "$schema": "https://schema.management.azure.com/schemas/2019-08-01/deploymentTemplate.json#",
-                        "contentVersion": "1.0.0.0",
-                        "parameters": {},
-                        "variables": {},
-                        "resources": [
-                            {
-                                "type": "Microsoft.Storage/storageAccounts",
-                                "apiVersion": "2019-06-01",
-                                "name": "[variables('storageAccountName')]",
-                                "location": "[variables('rgLocation')]",
-                                "kind": "StorageV2",
-                                "sku": {
-                                    "name": "Standard_LRS"
-                                }
-                            },
-                            {
-                                "type": "Microsoft.Storage/storageAccounts",
-                                "apiVersion": "2019-06-01",
-                                "name": "[variables('funcAppstorageAccountName')]",
-                                "location": "ukwest",
-                                "sku": {
-                                    "name": "Standard_LRS"
-                                },
-                                "kind": "Storage"
+                    "scope": "inner"
+                },
+                "mode": "Incremental",
 
+                "template": {
+                    "$schema": "https://schema.management.azure.com/schemas/2019-08-01/deploymentTemplate.json#",
+                    "contentVersion": "1.0.0.0",
+                    "parameters": {},
+                    "variables": {
+                        "storageAccountName": "avfc",
+                        "rgLocation": "ukwest",
+                        "functionAppName": "backendforfrontend",
+                        "hostingPlanName": "backendforfrontend",
+                        "applicationInsightsName": "backendforfrontend",
+                        "funcAppStorageAccountName": "[concat(uniquestring('112'), 'azfunctions')]",
+                        "functionWorkerRuntime": "node"
+                    },
+                    "resources": [
+                        {
+                            "type": "Microsoft.Storage/storageAccounts",
+                            "apiVersion": "2019-06-01",
+                            "name": "[variables('storageAccountName')]",
+                            "location": "[variables('rgLocation')]",
+                            "kind": "StorageV2",
+                            "sku": {
+                                "name": "Standard_LRS"
+                            }
+                        },
+                        {
+                            "type": "Microsoft.Storage/storageAccounts",
+                            "apiVersion": "2019-06-01",
+                            "name": "[variables('funcAppstorageAccountName')]",
+                            "location": "ukwest",
+                            "sku": {
+                                "name": "Standard_LRS"
                             },
-                            {
-                                "type": "Microsoft.Web/serverfarms",
-                                "apiVersion": "2020-06-01",
+                            "kind": "Storage"
+
+                        },
+                        {
+                            "type": "Microsoft.Web/serverfarms",
+                            "apiVersion": "2020-06-01",
+                            "name": "[variables('hostingPlanName')]",
+                            "location": "ukwest",
+                            "sku": {
+                                "name": "Y1",
+                                "tier": "Dynamic"
+                            },
+                            "properties": {
                                 "name": "[variables('hostingPlanName')]",
-                                "location": "ukwest",
-                                "sku": {
-                                    "name": "Y1",
-                                    "tier": "Dynamic"
-                                },
-                                "properties": {
-                                    "name": "[variables('hostingPlanName')]",
-                                    "computeMode": "Dynamic"
-                                }
-                            },
-                            /*  {
+                                "computeMode": "Dynamic"
+                            }
+                        },
+                        /*  {
                             "type": "Microsoft.Web/sites",
                             "apiVersion": "2020-06-01",
                             "name": "[variables('functionAppName')]",
@@ -120,36 +123,36 @@
                                 }
                             }
                         }, */
-                            {
-                                "type": "microsoft.insights/components",
-                                "apiVersion": "2020-02-02-preview",
-                                "name": "[variables('applicationInsightsName')]",
-                                "location": "ukwest",
-                                "kind": "web",
-                                "tags": {
-                                    "[concat('hidden-link:', resourceId('Microsoft.Web/sites', variables('applicationInsightsName')))]": "Resource"
-                                },
-                                "properties": {
-                                    "ApplicationId": "[variables('applicationInsightsName')]",
-                                    "Request_Source": "rest",
-                                    "Application_Type": "web"
-                                }
-
-                            }
-                        ],
-                        "outputs": {
-                            "serverFarmIdOutputInner": {
-                                "type": "string",
-                                "value": "[resourceId('Microsoft.Web/serverfarms', variables('hostingPlanName'))]"
+                        {
+                            "type": "microsoft.insights/components",
+                            "apiVersion": "2020-02-02-preview",
+                            "name": "[variables('applicationInsightsName')]",
+                            "location": "ukwest",
+                            "kind": "web",
+                            "tags": {
+                                "[concat('hidden-link:', resourceId('Microsoft.Web/sites', variables('applicationInsightsName')))]": "Resource"
                             },
-                            "objectOutputInner": {
-                                "type": "object",
-                                "value": "[subscription()]"
+                            "properties": {
+                                "ApplicationId": "[variables('applicationInsightsName')]",
+                                "Request_Source": "rest",
+                                "Application_Type": "web"
                             }
+
+                        }
+                    ],
+                    "outputs": {
+                        "serverFarmIdOutputInner": {
+                            "type": "string",
+                            "value": "[resourceId('Microsoft.Web/serverfarms', variables('hostingPlanName'))]"
+                        },
+                        "objectOutputInner": {
+                            "type": "object",
+                            "value": "[subscription()]"
                         }
                     }
                 }
             }
+        }
 
     ],
     "outputs": {
