@@ -4,7 +4,7 @@
     "parameters": {},
     "functions": [],
     "variables": {
-        "rgName": "villa",
+        "rgName": "villa"
     },
     "resources": [
         {
@@ -27,7 +27,6 @@
                     "scope": "inner"
                 },
                 "mode": "Incremental",
-
                 "template": {
                     "$schema": "https://schema.management.azure.com/schemas/2019-08-01/deploymentTemplate.json#",
                     "contentVersion": "1.0.0.0",
