@@ -38,7 +38,7 @@
                         "functionAppName": "apollographqlserver",
                         "hostingPlanName": "apollographqlserver",
                         "applicationInsightsName": "apollographqlserver",
-                        "funcAppStorageAccountName": "[concat(uniquestring('112'), 'apolloserverstorage')]",
+                        "funcAppStorageAccountName": "[concat(uniquestring('112'), 'apollo')]",
                         "functionWorkerRuntime": "node"
                     },
                     "resources": [
