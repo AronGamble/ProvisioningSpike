@@ -137,7 +137,6 @@
                                 "Request_Source": "rest",
                                 "Application_Type": "web"
                             }
-
                         },
                         {
                             "type": "Microsoft.ApiManagement/service",
@@ -151,6 +150,38 @@
                             "properties": {
                                 "publisherEmail": "aron.gamble@nationalgrid.com",
                                 "publisherName": "Aron Gamble"
+                            }
+                        },
+                        {
+                            "type": "Microsoft.DocumentDB/databaseAccounts",
+                            "apiVersion": "2021-01-15",
+                            "name": "solutionlabcosmos",
+                            "location": "ukwest",
+                            "properties": {
+                                "enableFreeTier": true,
+                                "databaseAccountOfferType": "Standard",
+                                "consistencyPolicy": {
+                                    "defaultConsistencyLevel": "Session"
+                                },
+                                "locations": [
+                                    {
+                                        "locationName": "ukwest"
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "type": "Microsoft.DocumentDB/databaseAccounts/sqlDatabases",
+                            "apiVersion": "2021-01-15",
+                            "name": "[concat('solutionlab' ,'/', 'sollabdb')]",
+                            "dependsOn": [
+                                "[resourceId('Microsoft.DocumentDB/databaseAccounts', 'solutionlabcosmos')]"
+                            ],
+                            "properties": {
+                                "resource": {
+                                    "id": "sollabdb"
+                                },
+                                "options": { "throughput": 400 }
                             }
                         }
                     ],
@@ -167,9 +198,6 @@
                 }
             }
         }
-
     ],
-    "outputs": {
-
-    }
+    "outputs": {}
 }
