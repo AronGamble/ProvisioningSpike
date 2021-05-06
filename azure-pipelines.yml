@@ -10,8 +10,12 @@ trigger:
 pool:
   vmImage: ubuntu-latest
 
+variables:
+ - name: projectName
+   value: solutionlab
+
 steps:
-- script: echo $(resource_prefix)
+- script: echo 'ResourcePrefix' $(resource_prefix)
   displayName: 'Show a variable'
 
 - task: AzureResourceManagerTemplateDeployment@3
