@@ -11,13 +11,13 @@ pool:
   vmImage: ubuntu-latest
 
 variables:
-- name: projectName
+- name: mainProject
   value: solutionlab
 
 steps:
 - script: |
-   echo 'Macro Resource Prefix is' $(resource_prefix)
-   echo 'Template Expression Resource Prefix is' ${{ projectName }}
+   echo 'Macro Project Name is' $(projectName)
+   echo 'Template Expression Resource Prefix is' $( mainProject )
   displayName: 'Show variable values'
 
 - task: AzureResourceManagerTemplateDeployment@3
