@@ -11,7 +11,7 @@ pool:
   vmImage: ubuntu-latest
 
 steps:
-- script: $(resource_prefix)
+- script: echo $(resource_prefix)
   displayName: 'Show a variable'
 
 - task: AzureResourceManagerTemplateDeployment@3
