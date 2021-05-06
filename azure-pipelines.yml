@@ -11,8 +11,8 @@ pool:
   vmImage: ubuntu-latest
 
 variables:
- - name: projectName
-   value: solutionlab
+- name: projectName
+  value: solutionlab
 
 steps:
 - script: |
