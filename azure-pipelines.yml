@@ -25,7 +25,7 @@ steps:
     deploymentMode: 'Incremental' 
     deploymentOutputs: 'runOutputs'
 - script: |
-    echo Add other tasks to build, test, and deploy your project.
-    echo See https://aka.ms/yaml
+    echo $(resource_prefix)
+    echo Uses a variable
   displayName: 'Run a multi-line script'
   
