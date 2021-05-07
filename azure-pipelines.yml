@@ -18,6 +18,7 @@ steps:
 - script: |
    echo 'Macro Project Name is' $(mainProject)
    echo 'Template Expression Resource Prefix is' $(resource_prefix)
+   echo '' ${{variables.mainProject}}
   displayName: 'Show variable values'
 
 - task: AzureResourceManagerTemplateDeployment@3
